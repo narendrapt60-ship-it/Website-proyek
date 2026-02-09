@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pembayaran Berhasil</title>
+  <link rel="stylesheet" href="bayar-sukses.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <main class="success-wrap">
+    <div class="success-card">
+      <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h1>Pembayaran Berhasil</h1>
+      <p class="subtitle">Terima kasih. Transaksi telah selesai.</p>
+
+      <div class="details">
+        <div class="row"><span>Metode</span><span id="s-method">-</span></div>
+        <div class="row"><span>Total</span><span id="s-total">Rp 0</span></div>
+        <div class="row"><span>Nominal Diberikan</span><span id="s-given">Rp 0</span></div>
+        <div class="row"><span>Kembalian</span><span id="s-change">Rp 0</span></div>
+        <div class="row"><span>Waktu</span><span id="s-time">-</span></div>
+      </div>
+
+      <div class="actions">
+        <button id="backToKasir" class="btn">Kembali ke Kasir</button>
+        <button id="printReceipt" class="btn ghost">Cetak Struk</button>
+      </div>
+    </div>
+  </main>
+  <script src="bayar-sukses.js"></script>
+</body>
+</html>

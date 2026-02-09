@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir App UI</title>
+    <link rel="stylesheet" href="kasir.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <aside class="sidebar-left">
+            <div class="logo">
+                <span class="logo-box">K</span>
+                <span class="logo-text">KASIR APP</span>
+            </div>
+            
+            <nav class="menu-list">
+                <p class="menu-label">MENU</p>
+                <a href="#" class="menu-item active"><i class="fa-solid fa-utensils"></i> Makanan</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-mug-hot"></i> Minuman</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-cookie"></i> Snack</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-ice-cream"></i> Dessert</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-ellipsis"></i> Lain-lain</a>
+            </nav>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cari Produk...">
+            </div>
+        </aside>
+
+        <main class="product-area">
+            <header class="content-header">
+                <h2>Daftar Produk</h2>
+                <div class="filter-tabs">
+                    <button class="tab-btn active">Favorit</button>
+                    <button class="tab-btn">Promo</button>
+                </div>
+            </header>
+
+            <div class="product-grid" id="productGrid">
+                <div class="product-card" data-id="1" data-name="Nasi Goreng" data-price="35000">
+                    <div class="badge-add"><i class="fa-solid fa-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" alt="Nasi Goreng">
+                    <div class="product-info">
+                        <h4>Nasi Goreng</h4>
+                        <p class="price">Rp 35.000</p>
+                    </div>
+                </div>
+                <div class="product-card" data-id="2" data-name="Es Kopi Latte" data-price="20000">
+                    <div class="badge-add"><i class="fa-solid fa-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Es Kopi Latte">
+                    <div class="product-info">
+                        <h4>Es Kopi Latte</h4>
+                        <p class="price">Rp 20.000</p>
+                    </div>
+                </div>
+                <div class="product-card" data-id="3" data-name="Steak" data-price="50000">
+                    <div class="badge-add"><i class="fa-solid fa-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Kentang">
+                    <div class="product-info">
+                        <h4>Steak</h4>
+                        <p class="price">Rp 50.000</p>
+                    </div>
+                </div>
+                <div class="product-card" data-id="4" data-name="Cheesecake" data-price="40000">
+                    <div class="badge-add"><i class="fa-solid fa-plus"></i></div>
+                    <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400" alt="Cheesecake">
+                    <div class="product-info">
+                        <h4>Cheesecake</h4>
+                        <p class="price">Rp 40.000</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3>Pesanan #001</h3>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items akan ditampilkan di sini -->
+            </div>
+
+            <div class="checkout-footer">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">Rp 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Pajak (10%)</span>
+                    <span id="tax">Rp 0</span>
+                </div>
+                <div class="total-line">
+                    <span>Total</span>
+                    <span class="total-amount" id="total">Rp 0</span>
+                </div>
+                <div class="summary-line">
+                <button id="btnPay" class="btn-pay">BAYAR SEKARANG</button>
+            </div>
+        </aside>
+
+    </div>
+    <script src="kasir.js"></script>
+</body>
+</html>

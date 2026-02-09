@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bayar - Kasir App</title>
+  <link rel="stylesheet" href="bayar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="checkout-wrap">
+    <div class="card">
+      <header class="card-header">
+        <button id="backBtn" class="back"><i class="fa-solid fa-arrow-left"></i></button>
+        <h1>Konfirmasi Pembayaran</h1>
+      </header>
+
+      <section class="order-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">Rp 0</span>
+        </div>
+        <div class="summary-row">
+          <span>Pajak (10%)</span>
+          <span id="tax">Rp 0</span>
+        </div>
+        <div class="summary-row total">
+          <strong>Total Tagihan</strong>
+          <strong id="total">Rp 0</strong>
+        </div>
+      </section>
+
+      <section class="payment-panel">
+        <label for="method">Pilih Metode Pembayaran</label>
+        <select id="method">
+          <option value="cash">Tunai</option>
+          <option value="card">Kartu (Debit/Kredit)</option>
+          <option value="qris">QRIS</option>
+        </select>
+
+        <label for="given">Nominal Diberikan</label>
+        <input id="given" type="number" inputmode="numeric" placeholder="Masukkan nominal (untuk tunai)">
+
+        <div id="qrisBox" class="qris-box" style="display:none;">
+          <p class="qris-caption">Scan untuk bayar (Contoh QRIS)</p>
+          <img id="qrisImg" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=QRIS+PAYMENT" alt="Contoh QRIS">
+        </div>
+
+        <div class="summary-row change">
+          <span>Kembalian</span>
+          <span id="change">Rp 0</span>
+        </div>
+
+        <button id="confirmPay" class="confirm">Bayar Sekarang</button>
+      </section>
+
+      <footer class="help">Pastikan jumlah sudah benar sebelum konfirmasi.</footer>
+    </div>
+  </div>
+  <script src="bayar.js"></script>
+</body>
+</html>
